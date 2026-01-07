@@ -1,6 +1,14 @@
-import React from 'react';
+import React from "react";
+import NavBar from "./NavBar";
 function RightSideBar() {
-    return (  <>Rightside</>);
+  return (
+    <div>
+      {/* {navbar} */}
+      <NavBar/>
+      {/* {content} */}
+      {/* {footer} */}
+    </div>
+  );
 }
 
 export default RightSideBar;

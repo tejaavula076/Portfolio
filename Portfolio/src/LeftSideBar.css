@@ -1,0 +1,41 @@
+.leftSideBarDiv{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    justify-content:center;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  color: #ffffff;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+.leftBarConnectionLinks{
+    margin-right: 1rem;
+     cursor: pointer;
+    /* border-radius: 50%; */
+    /* width: 10vw;
+    height: 10vh;
+    background-color: white;
+    color: #000000;
+    padding: 0.4rem;
+    margin-right: 1rem;
+    text-align: center;
+    cursor: pointer; */
+}
+.leftBarConnectionLinks :hover{
+    transform: scale(1.5);
+}
+.leftSideBarConnectDiv{
+    margin-top: 1rem;}
+/* }.leftSideBarConnectDiv:hover{
+    transform: scale(1.5);
+} */
+.hrline{
+    color: white !important;
+    width: 100%;
+    margin: 1rem;
+}
+.resumeButton{
+    margin: 3rem;
+}
