@@ -1,0 +1,179 @@
+.eduWrap {
+  margin: 1rem;
+}
+
+.eduHeading {
+  margin: 0 0 1rem;
+  color: var(--primary);
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+/* Timeline container */
+.eduTimeline {
+  position: relative;
+  width: min(1050px, 100%);
+  margin: 0 auto;
+  padding: 10px 0 30px;
+}
+
+/* Straight center line */
+.eduLine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  transform: translateX(-50%);
+  background: rgba(17, 24, 39, 0.14);
+  border-radius: 999px;
+}
+
+/* Each row */
+.eduRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 22px 0;
+  min-height: 120px;
+}
+
+/* Left/right layout */
+.eduRow.left {
+  justify-content: flex-start;
+}
+.eduRow.right {
+  justify-content: flex-end;
+}
+
+/* Card width so degree has space */
+.eduCard {
+  width: 46%;
+  max-width: 520px;
+  background: linear-gradient(135deg, #ffffff, #fbfbff);
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: 0 14px 35px rgba(17, 24, 39, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* Make cards closer to center */
+.eduRow.left .eduCard {
+  margin-right: auto;
+}
+.eduRow.right .eduCard {
+  margin-left: auto;
+}
+
+/* On hover */
+.eduCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(99, 102, 241, 0.35);
+  box-shadow: 0 20px 50px rgba(17, 24, 39, 0.10);
+}
+
+/* Dot */
+.eduDot {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(156, 163, 175, 0.95);
+  box-shadow: 0 0 0 8px rgba(156, 163, 175, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+/* ACTIVE dot */
+.dotActive {
+  background: var(--accent);
+  transform: translate(-50%, 0) scale(1.15);
+  box-shadow: 0 0 0 9px rgba(99, 102, 241, 0.16),
+    0 0 22px rgba(99, 102, 241, 0.55);
+}
+
+/* Active card styling */
+.eduRow.active .eduCard {
+  border-color: rgba(99, 102, 241, 0.35);
+  box-shadow: 0 22px 55px rgba(17, 24, 39, 0.12);
+}
+
+/* Card content */
+.eduTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.eduDegree {
+  margin: 0;
+  color: var(--primary);
+  font-size: 1.05rem;
+  font-weight: 850;
+  line-height: 1.35;
+
+  /* Prevent ugly breaks like Administrati|on */
+  word-break: keep-all;
+  overflow-wrap: normal;
+  white-space: normal;
+}
+
+.eduDate {
+  font-size: 0.9rem;
+  white-space: nowrap;
+  color: var(--primary);
+  background: rgba(236, 72, 153, 0.12);
+  border: 1px solid rgba(236, 72, 153, 0.18);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.eduSchool {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.eduTag {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 750;
+  font-size: 0.85rem;
+  color: var(--primary);
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.16);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+/* MOBILE: stack and move line to left */
+@media (max-width: 900px) {
+  .eduLine {
+    left: 18px;
+    transform: none;
+  }
+
+  .eduRow {
+    justify-content: flex-start !important;
+    padding-left: 45px;
+  }
+
+  .eduCard {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .eduDot {
+    left: 18px;
+    transform: translate(0, 0);
+  }
+
+  .dotActive {
+    transform: translate(0, 0) scale(1.15);
+  }
+}

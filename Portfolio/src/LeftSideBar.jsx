@@ -25,7 +25,7 @@ function LeftSideBar() {
         </a>
       </div>
       <div className="">
-        <a href="/TEJASWI_AVULA_RESUME.pdf" target="_blank" rel="noopener noreferrer">
+        <a href="/TEJASWI_AVULA.pdf" target="_blank" rel="noopener noreferrer">
         <button className=" resumeButton">Resume</button>
         </a>
       </div>

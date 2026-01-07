@@ -1,0 +1,118 @@
+.projectsSection {
+  margin: 1rem;
+  overflow: hidden;
+}
+
+.projectsHeading {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  color: var(--primary);
+}
+
+/* 2 x 2 grid */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* card */
+.projectCard {
+  position: relative;
+  background: linear-gradient(135deg, #ffffff, #fbfbff);
+  border-radius: 18px;
+  padding: 20px;
+  min-height: 220px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  box-shadow: 0 14px 35px rgba(17, 24, 39, 0.08);
+
+  opacity: 0;
+  transition:
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.6s ease,
+    box-shadow 0.2s ease;
+}
+
+/* initial spread */
+.tl { transform: translate(-120px, -80px); }
+.tr { transform: translate(120px, -80px); }
+.bl { transform: translate(-120px, 80px); }
+.br { transform: translate(120px, 80px); }
+
+/* pull to center */
+.projectsSection.active .projectCard {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+/* hover */
+.projectCard:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 22px 55px rgba(17, 24, 39, 0.12);
+}
+
+/* live dot */
+.liveDot {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 12px;
+  height: 12px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(34,197,94,0.6); }
+  70% { box-shadow: 0 0 0 10px rgba(34,197,94,0); }
+  100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+}
+
+/* content */
+.projectTitle {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.projectDate {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 4px 0 10px;
+}
+
+.projectDesc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--primary);
+  flex-grow: 1;
+}
+
+.projectLink {
+  margin-top: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.projectLink:hover {
+  color: var(--highlight);
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .projectCard {
+    transform: translate(0, 40px);
+  }
+}

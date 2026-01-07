@@ -3,22 +3,27 @@ import NavBar from "./NavBar";
 import "./RightSideBar.css";
 import Aboutme from "./AboutMe";
 import Skills from "./Skills";
+import Experience from "./Experience";
+import Projects from "./Projects";
+import Education from "./Education";
 function RightSideBar() {
   return (
     <div className="col-sm-12 col-md-8 rightSideDiv">
       <NavBar />
       <section>
-        <Aboutme/>
-        <Skills/>
-
+        <Aboutme />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Education />
       </section>
-      <footer>
+      {/* <footer>
         <div className="footer">
           <p> “Focus on your actions, not the results.”</p>
         
           <p><em>— Bhagavad Gita 2.47</em> </p>
         </div>
-      </footer>
+      </footer> */}
 
       {/* {content} */}
       {/* {footer} */}

@@ -1,0 +1,139 @@
+#experience {
+  margin: 1rem;
+}
+
+.experienceHeading {
+  margin: 0 0 0.8rem;
+  color: var(--primary);
+  font-size: 1.6rem;
+  font-weight: 750;
+}
+
+.expTimeline {
+  padding: 0;
+}
+
+/* dot + line */
+.expDot {
+  background: var(--accent) !important;
+  box-shadow: 0 0 0 6px rgba(99, 102, 241, 0.12);
+}
+
+.expLine {
+  background: rgba(17, 24, 39, 0.15) !important;
+}
+
+/* content spacing */
+.expContent {
+  padding-top: 6px !important;
+}
+
+/* card */
+.expCard {
+  background: linear-gradient(135deg, #ffffff, #fbfbff);
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: 0 14px 35px rgba(17, 24, 39, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.expCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(99, 102, 241, 0.35);
+  box-shadow: 0 20px 50px rgba(17, 24, 39, 0.10);
+}
+
+/* top row */
+.expTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.expRole {
+  margin: 0;
+  color: var(--primary);
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.expCompany {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.expDate {
+  font-size: 0.9rem;
+  color: var(--primary);
+  background: rgba(236, 72, 153, 0.12);
+  border: 1px solid rgba(236, 72, 153, 0.18);
+  padding: 6px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* bullets */
+.expList {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--primary);
+}
+
+.expList li {
+  margin-bottom: 6px;
+  line-height: 1.6;
+  color: var(--primary);
+}
+
+.expList li:last-child {
+  margin-bottom: 0;
+}
+/* remove left padding of timeline */
+.expTimeline {
+  padding-left: 0 !important;
+}
+
+/* remove the invisible spacer before each item */
+.MuiTimelineItem-root::before {
+  flex: 0 !important;
+  padding: 0 !important;
+}
+.MuiTimeline-root {
+  padding-top: 0 !important;
+}
+/* make dots nicer by default */
+.expDot {
+  background: rgba(156, 163, 175, 0.9) !important;
+  box-shadow: 0 0 0 6px rgba(156, 163, 175, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+/* glow when active */
+.activeDot {
+  background: var(--accent) !important;
+  transform: scale(1.15);
+  box-shadow:
+    0 0 0 7px rgba(99, 102, 241, 0.18),
+    0 0 18px rgba(99, 102, 241, 0.55);
+}
+
+/* line active as you scroll down */
+.expLine {
+  background: rgba(17, 24, 39, 0.14) !important;
+  transition: background 0.25s ease;
+}
+
+.activeLine {
+  background: rgba(99, 102, 241, 0.45) !important;
+}
+
+/* optional: make active card slightly pop */
+.activeCard {
+  border-color: rgba(99, 102, 241, 0.35);
+  box-shadow: 0 22px 55px rgba(17, 24, 39, 0.12);
+}
+
