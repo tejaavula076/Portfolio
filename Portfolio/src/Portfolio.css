@@ -1,4 +1,12 @@
-.PortfolioDiv{
-    display: flex;
-    flex-direction: row;
+.PortfolioDiv {
+  display: flex;
+  flex-direction: row; /* default for md & above */
+  width: 100%;
+}
+
+/* Small devices (mobile) */
+@media (max-width: 767px) {
+  .PortfolioDiv {
+    flex-direction: column;
+  }
 }

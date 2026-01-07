@@ -1,0 +1,62 @@
+.navbar {
+  background-color: #4A70A9;
+  color: #EFECE3;
+  padding: 14px 18px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18); /* bottom shadow */
+  display: flex;
+  justify-content: center;
+}
+
+/* Equal space between items */
+.navbarItems {
+  display: flex;
+  justify-content: space-evenly; /* equal spacing */
+  align-items: center;
+  gap: 24px; /* extra safety spacing */
+}
+
+/* Link style */
+.navItem {
+  color: #EFECE3;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;           /* cursor on hover */
+  position: relative;        /* needed for underline */
+  padding: 6px 10px;         /* gives hover underline room */
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+/* Slight lift on hover */
+.navItem:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+/* Hand-drawn underline */
+.navItem::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 2px;
+  height: 8px;
+
+  /* marker-like stroke */
+  background: rgba(239, 236, 227, 0.85);
+
+  /* makes it look “hand drawn” */
+  border-radius: 10px 3px 10px 3px;
+  transform: scaleX(0) rotate(-1.5deg);
+  transform-origin: left;
+  transition: transform 0.22s ease;
+  filter: blur(0.2px);
+}
+
+.navItem:hover::after {
+  transform: scaleX(1) rotate(-1.5deg);
+}
+
+/* Optional: show underline for active/selected item */
+.navItem.active::after {
+  transform: scaleX(1) rotate(-1.5deg);
+}

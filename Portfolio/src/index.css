@@ -1,3 +1,9 @@
 body{
     font-family: "Plus Jakarta Sans", sans-serif;
+    background: linear-gradient(
+  135deg,
+  #8FABD4,
+  #4A70A9
+);
+ color: #1E2A3A;
 }

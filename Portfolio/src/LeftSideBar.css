@@ -1,20 +1,25 @@
-.leftSideBarDiv{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    width: 30vw;
-    justify-content:center;
-  background: linear-gradient(135deg, #000000, #1a1a1a);
-  color: #ffffff;
-    align-items: center;
-    font-weight: bold;
-    font-size: 18px;
+.leftSideBarDiv {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  justify-content: center;
+
+  background-size: 400% 400%;
+  background: linear-gradient(135deg, #8fabd4, #4a70a9);
+  color: #1e2a3a;
+  align-items: center;
+  font-weight: bold;
+  /* font-size: 18px; */
 }
-.leftBarConnectionLinks{
-    margin-right: 1rem;
-     cursor: pointer;
-    /* border-radius: 50%; */
-    /* width: 10vw;
+
+.leftBarConnectionLinks {
+  margin-right: 1rem;
+  cursor: pointer;
+  color: #efece3;
+  font-size: 25px;
+  /* border-radius: 50%; */
+  /* width: 10vw;
     height: 10vh;
     background-color: white;
     color: #000000;
@@ -23,19 +28,53 @@
     text-align: center;
     cursor: pointer; */
 }
-.leftBarConnectionLinks :hover{
-    transform: scale(1.5);
+.leftBarConnectionLinks :hover {
+  transform: scale(1.5);
 }
-.leftSideBarConnectDiv{
-    margin-top: 1rem;}
+.leftSideBarConnectDiv {
+  margin-top: 1rem;
+}
 /* }.leftSideBarConnectDiv:hover{
     transform: scale(1.5);
 } */
-.hrline{
-    color: white !important;
-    width: 100%;
-    margin: 1rem;
+.hrline {
+  color: white !important;
+  width: 100%;
+  margin: 1rem;
 }
-.resumeButton{
-    margin: 3rem;
+.resumeButton {
+    margin:3rem;
+  background-color: #4a70a9;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+.resumeButton:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(74, 112, 169, 0.35);
+  background-color: #3f6498;
+}
+
+.resumeButton:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 4px 10px rgba(74, 112, 169, 0.25);
+}
+.typing::after {
+  content: "|| Fullstack Developer"; 
+  animation: swap 6s infinite;
+  margin-left: 8px;
+color: #1e2a3a;
+}
+
+@keyframes swap {
+  0%   { opacity: 0; }
+  20%  { opacity: 1; content: "|| Fullstack Developer"; }
+  50%  { opacity: 1; content: "|| Fullstack Developer";  }
+  70%  { opacity: 0; content: "|| Fullstack Developer";  }
+  80%  { opacity: 0; content: "|| Fullstack Developer";  }
+  100% { opacity: 1; content: "|| Fullstack Developer";  }
 }

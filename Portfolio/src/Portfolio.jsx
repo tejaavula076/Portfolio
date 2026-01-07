@@ -4,9 +4,9 @@ import RightSideBar from "./RightSideBar";
 import "./Portfolio.css"
 function Portfolio() {
   return (
-    <div className="PortfolioDiv">
+    <div className="PortfolioDiv col-sm-12">
       {/* <h1 class="text-3xl font-bold underline text-clifford">Hello world!</h1> */}
-      <LeftSideBar />
+      <LeftSideBar/>
       <RightSideBar />
     </div>
   );
