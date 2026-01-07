@@ -17,7 +17,7 @@ export default function NavBar() {
           Projects
         </a>
 
-        <a className="navItem" href="#contact">
+        <a className="navItem" href="#education">
           Education
         </a>
       </div>

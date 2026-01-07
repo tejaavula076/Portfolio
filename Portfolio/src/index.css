@@ -1,9 +1,14 @@
-body{
-    font-family: "Plus Jakarta Sans", sans-serif;
-    background: linear-gradient(
-  135deg,
-  #8FABD4,
-  #4A70A9
-);
- color: #1E2A3A;
+:root {
+  --bg: #F9FAFB;
+  --primary: #111827;
+  --accent: #6366F1;
+  --highlight: #f2b6d4;
+  --muted: #9CA3AF;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--primary);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin: 0;
 }

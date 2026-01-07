@@ -1,10 +1,11 @@
 .navbar {
-  background-color: #4A70A9;
-  color: #EFECE3;
+  background-color: var(--bg);
+  color: var(--primary);
   padding: 14px 18px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18); /* bottom shadow */
+  box-shadow: 0 8px 18px rgba(17, 24, 39, 0.08);
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
+  margin-top: 0;
 }
 
 /* Equal space between items */
@@ -17,12 +18,12 @@
 
 /* Link style */
 .navItem {
-  color: #EFECE3;
+  color: var(--primary);
   text-decoration: none;
   font-weight: 600;
-  cursor: pointer;           /* cursor on hover */
-  position: relative;        /* needed for underline */
-  padding: 6px 10px;         /* gives hover underline room */
+  cursor: pointer;
+  position: relative;
+  padding: 6px 10px;
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
@@ -41,20 +42,20 @@
   bottom: 2px;
   height: 8px;
 
-  /* marker-like stroke */
-  background: rgba(239, 236, 227, 0.85);
+  background: var(--highlight);
+  opacity: 0.8;
 
-  /* makes it look “hand drawn” */
   border-radius: 10px 3px 10px 3px;
   transform: scaleX(0) rotate(-1.5deg);
   transform-origin: left;
   transition: transform 0.22s ease;
-  filter: blur(0.2px);
 }
 
-.navItem:hover::after {
+.navItem:hover::after,
+.navItem.active::after {
   transform: scaleX(1) rotate(-1.5deg);
 }
+
 
 /* Optional: show underline for active/selected item */
 .navItem.active::after {
