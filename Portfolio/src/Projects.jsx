@@ -8,7 +8,7 @@ const PROJECTS = [
     date: "Jan 2026",
     desc: "AI-powered conversational web application with real-time, context-aware responses using LLM APIs and a responsive React UI.",
     live: true,
-    link: "https://your-converse-ai-link.com",
+    link: "https://converseai-frontend.netlify.app/",
   },
   {
     id: "tr",
